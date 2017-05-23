@@ -1,15 +1,19 @@
 var gulp = require('gulp');
-var browerSync = require('browser-sync');
- 
-var browser = browerSync.create();
-
-var serverTask = function (done) {
+var browser = require('browser-sync');
+var path = require('path');
+var serverTask = function () {
 	browser.init({
 		server: {
-			baseDir: './dist/html/'
-		}
+			baseDir: './',
+
+		},
+		startPath: "dist/html/"
 	});
-	done && done();
+
+	
+	gulp.watch(path.resolve(process.cwd(), config.src, config.css.src, '**/*.scss'),['css']);
+	gulp.watch('./src/html/**/*.html', ['html']).on('change',browser.reload);
+
 
 }
 
