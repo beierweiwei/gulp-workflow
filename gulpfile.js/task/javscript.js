@@ -10,8 +10,8 @@ function jsTask() {
 	var curPath = process.env.PWD || process.cwd();
 	var paths = {
 		//拼接路径
-		dist: path.resolve(curPath, config.dist, config.js.dist),
-		src: path.resolve(curPath, config.src, config.js.src,  '**/*.js')
+		dist: path.resolve(curPath, config.dist, config.javascript.dist),
+		src: path.resolve(curPath, config.src, config.javascript.src,  '**/*.js')
 	}
 	var jsStream = gulp.src(paths.src)
 		.pipe(concat('main.js'))

@@ -1,0 +1,22 @@
+<h1 id="git-">git笔记</h1>
+<h2 id="-">术语</h2>
+<ul>
+<li>HEAD: 指针指向当前分支</li>
+<li>master 主干分支
+##命令行<h3 id="-">基本操作</h3>
+</li>
+<li>从当前版本恢复文件
+<code>$git checkout --filename</code>;</li>
+<li>从当前版本库删除文件
+<code>$git remove filename</code>;<h3 id="-">分支操作</h3>
+</li>
+<li><code>$git checkout -b &lt;name&gt;</code> checkout后面加上参数<code>-b</code>,表示创建并切换
+相当于：
+  <code>$ git branch dev</code>
+  <code>$ git checkout dev</code></li>
+<li><code>$git branch</code> 查看所有分支，当前分支前会有<code>*</code>号</li>
+<li><code>$git checkout &lt;name&gt;</code> 切换分支</li>
+<li><code>$git branch &lt;name&gt;</code> 创建分支</li>
+<li><code>$git merge &lt;name&gt;</code> 当前分支与某分支合并</li>
+<li><code>$git branch -d &lt;name&gt;</code> 删除分支 </li>
+</ul>

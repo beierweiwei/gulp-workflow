@@ -1,10 +1,19 @@
-// var gulp = require('gulp');
-// var browserSync = require('browser-sync').create();
-// var watchTask = function(){
-// 	gulp.watch('./src/css/**/*.scss', ['css']);
-// 	gulp.watch('./src/js/**/*.js', ['js']);
-	
-// }
-// gulp.task('watch', watchTask)
+var gulp = require('gulp');
+var watch = require('gulp-watch');
+var path = require('path');
+var tasks = ['css', 'javascript', 'html', 'static', 'md'];
 
-// module.exports = watchTask;
+function watchTask(cb){
+	tasks.forEach(function(task, i){
+		let ext ='**';
+		if(task == 'html') ext = '**/*.html';
+		watch([path.resolve(curPath, config.src, config[task].src, ext)], function(){
+			require('./' + task)();
+		});
+	});
+	cb();
+}
+
+gulp.task('watch',watchTask);
+module.exports = watchTask;
+

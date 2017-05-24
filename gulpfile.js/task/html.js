@@ -1,7 +1,8 @@
 var gulp = require('gulp');
 var path = require('path');
 // var uglifyHtml = require('gulp-uglify-html');
-var config = require('../task.config')
+var config = require('../task.config');
+var browser = require('browser-sync');
 
 var htmlTask = function () {
 	var curPath = process.env.PWD || process.cwd();
@@ -12,7 +13,8 @@ var htmlTask = function () {
 	}
 	return gulp.src([paths.src])
 	// .pipe(uglifyHtml())
-	.pipe(gulp.dest(paths.dist));
+	.pipe(gulp.dest(paths.dist))
+	.pipe(browser.stream());
 }
 gulp.task('html', htmlTask);
 module.exports = htmlTask;

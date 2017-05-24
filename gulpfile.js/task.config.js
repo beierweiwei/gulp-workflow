@@ -9,7 +9,7 @@ module.exports = {
 		src: 'css',
 		dist: 'css'
 	},
-	js: {
+	javascript: {
 		src: 'js',
 		dist: 'js'
 	},
@@ -24,5 +24,15 @@ module.exports = {
 	static: {
 		src: 'static',
 		dist: 'static'
+	},
+	server: {
+		server: {
+			baseDir: './'
+		},
+		startPath: 'dist/html'
+	},
+	md: {
+		src: 'html/md',
+		dist: 'html'
 	}
 }

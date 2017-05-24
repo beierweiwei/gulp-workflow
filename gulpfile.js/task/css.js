@@ -18,7 +18,9 @@ function styleTask() {
 		src: path.resolve(curPath, config.src, config.css.src,  '**/*.scss')
 	};
 	return gulp.src([paths.src])
-		.pipe(sass())
+		.pipe(sass()).on('error', function(){
+			console.log('sass error')
+		})
 		.pipe(concat('main.css'))
 		.pipe(autoprefixer({browers: 'last 2 version', cascade: false}))
 		.pipe(gulp.dest(paths.dist))
@@ -27,8 +29,6 @@ function styleTask() {
 		.pipe(gulp.dest(paths.dist))
 		.pipe(browser.stream())
 		;
-
-
 }
 gulp.task('css', styleTask);
 module.exports = styleTask;
