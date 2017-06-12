@@ -11,7 +11,8 @@ module.exports = {
 	},
 	javascript: {
 		src: 'js',
-		dist: 'js'
+		dist: 'js',
+		vendor: 'static/vendor'
 	},
 	images: {
 		src: 'images',
