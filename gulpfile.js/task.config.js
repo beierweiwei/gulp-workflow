@@ -24,16 +24,26 @@ module.exports = {
 	},
 	static: {
 		src: 'static',
-		dist: 'static'
+		dist: 'static',
+		able: true,
 	},
 	server: {
 		server: {
 			baseDir: './'
 		},
-		startPath: 'dist/html'
+		startPath: 'dist/html',
+		albe: true,
 	},
 	md: {
 		src: 'html/md',
-		dist: 'html'
+		dist: 'html',
+		able: true
+	},
+	ftp: {
+		remote: '',
+		host: '',
+		user: '',
+		password: '',
+		able: false,
 	}
 }

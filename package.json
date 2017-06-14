@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "gulp",
-    "build": "cross-env NODE_ENV=production PLATFORM=web webpack"
+    "start": "gulp --dev",
+    "dev": "gulp --dev",
+    "build": "gulp --product"
   },
   "author": "",
   "license": "ISC",
@@ -54,7 +55,10 @@
     "css-loader": "0.28.4",
     "express": "4.15.3",
     "extract-text-webpack-plugin": "2.1.0",
+    "gulp-deploy-ftp": "1.0.0",
+    "gulp-util": "3.0.8",
     "gulp-watch": "^4.3.11",
+    "merge-stream": "1.0.1",
     "style-loader": "0.18.1",
     "webpack": "2.6.1",
     "webpack-dev-middleware": "1.10.2",
