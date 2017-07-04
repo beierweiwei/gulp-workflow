@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>webpack文档笔记</title>
+	<link rel="stylesheet" href="../css/github-markdown.css">
+	<style>
+		.markdown-body {
+			box-sizing: border-box;
+			min-width: 200px;
+			max-width: 980px;
+			margin: 0 auto;
+			padding: 45px;
+		}
+
+		@media (max-width: 767px) {
+			.markdown-body {
+				padding: 15px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="markdown-body">
+	<h1 id="webpack-">webpack 笔记</h1>
+<p>###Vendor Code Splitting
+many third party libraries for framework/functionality needs does not change often。the [hash] portion in the vendor filename must remain constant</p>
+<h3 id="extracttextwebpackplugin-v2-61">ExtractTextWebpackPlugin v2.61</h3>
+<p>会单独从js中导入(require import)的css文件，将其分离出来放到一个指定的文件，并在index.html加入标签引用进来。</p>
+<pre><code class="lang-javascript">+var ExtractTextPlugin = require(&#39;extract-text-webpack-plugin&#39;);
+module.exports = {
+    module: {
+         rules: [{
+             test: /\.css$/,
+-            use: [ &#39;style-loader&#39;, &#39;css-loader&#39; ]
++            use: ExtractTextPlugin.extract({
++                use: &#39;css-loader&#39;
++            })
+         }]
+     },
++    plugins: [
++        new ExtractTextPlugin(&#39;styles.css&#39;),
++    ]
+}
+</code></pre>
+
+	</div>
+</body>
+</html>

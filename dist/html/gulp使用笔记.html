@@ -1,4 +1,28 @@
-<h3 id="-watchify-browserify-">使用 watchify 加速 browserify 编译</h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>gulp使用笔记</title>
+	<link rel="stylesheet" href="../css/github-markdown.css">
+	<style>
+		.markdown-body {
+			box-sizing: border-box;
+			min-width: 200px;
+			max-width: 980px;
+			margin: 0 auto;
+			padding: 45px;
+		}
+
+		@media (max-width: 767px) {
+			.markdown-body {
+				padding: 15px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="markdown-body">
+	<h3 id="-watchify-browserify-">使用 watchify 加速 browserify 编译</h3>
 <pre><code class="lang-javascript">var watchify = require(&#39;watchify&#39;);
 var browserify = require(&#39;browserify&#39;);
 var gulp = rquire(&#39;gulp&#39;);
@@ -83,3 +107,7 @@ gulp.task(&#39;javascript&#39;, function() {
     }))
     .pipe(gulp.dest(&#39;build&#39;));
 </code></pre>
+
+	</div>
+</body>
+</html>

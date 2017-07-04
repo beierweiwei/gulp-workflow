@@ -37,7 +37,8 @@ module.exports = {
 	md: {
 		src: 'html/md',
 		dist: 'html',
-		able: true
+		able: true,
+		tplSrc: 'html/layout.html'
 	},
 	ftp: {
 		remote: '',

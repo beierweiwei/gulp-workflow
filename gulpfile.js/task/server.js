@@ -4,9 +4,9 @@ var path = require('path');
 var config = require('../task.config')
 var webpackConfig = require('../config/webpack.config.dev')();
 var webpack = require('webpack');
+console.log(webpackConfig);
 var compiler = webpack(webpackConfig);
-var server = config.server;
-server.middleware = [
+var server = config.server.middleware = [
 	require('webpack-dev-middleware')(compiler, {
 	  stats: 'errors-only',
       watchOptions: config.server.watchOptions || {},

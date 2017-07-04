@@ -14,7 +14,7 @@ function filteTasks(tasks){
 }
 
 function defaultTask(done) {
-	var tasks = ['clearn','javascript', 'css', 'html', 'static', 'md', 'server', 'ftp', 'watch'];
+	var tasks = ['clearn','javascript', 'css',/* 'html',*/ 'static', 'md', 'server', 'ftp', 'watch'];
 	tasks = filteTasks(tasks);
 
 	console.log('done', tasks);
