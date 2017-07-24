@@ -3,7 +3,7 @@ module.exports = {
 	dist: './dist',
 	html: {
 		dist: 'html',
-		src: 'html'
+		src: 'page'
 	},
 	css: {
 		src: 'css',
@@ -35,10 +35,10 @@ module.exports = {
 		albe: true,
 	},
 	md: {
-		src: 'html/md',
+		src: 'page/md',
 		dist: 'html',
 		able: true,
-		tplSrc: 'html/layout.html'
+		tplSrc: 'page/layout.html'
 	},
 	ftp: {
 		remote: '',
@@ -46,5 +46,9 @@ module.exports = {
 		user: '',
 		password: '',
 		able: false,
+	},
+	comp: {
+		src: 'components',
+		dis: 'components'
 	}
 }

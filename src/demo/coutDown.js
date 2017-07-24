@@ -100,16 +100,10 @@ CountDonw.prototype = {
   		val = '0' + String(val) 
   	}
   	return val;
-  	
-
   },
   start() {
   	var _this = this;
   	var i = 0;
-  	function ttt(){
-  		_this._upDate();
-  		console.log('...');
-  	}
   	window.setInterval(function(){
   		_this._upDate();
   	}, 1000);

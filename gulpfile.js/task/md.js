@@ -13,11 +13,6 @@ function markedTask (){
 		dist: path.resolve(curPath, config.dist, config.md.dist)
 	};
 	opt = {
-			blog: 'wjj',
-			foot: 'foot',
-			header: 'header',
-			nav: '..',
-			title: '..',
 			tpl: path.resolve(curPath, config.src, config.md.tplSrc),
 	}
 	return gulp.src(paths.src)
